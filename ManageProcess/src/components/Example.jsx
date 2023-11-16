@@ -1,25 +1,24 @@
 import { useState } from "react"
 import styled from "styled-components"
-import "../App.css"
 
 function Example() {
     const [tasks,setTasks] = useState([
         { 
             id: 1,
             title: 'Proceso 1',
-            body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor.',
+            body: 'Spotify',
             list: 1
         },
         { 
             id: 2,
             title: 'Proceso 2',
-            body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor.',
+            body: 'Navegador',
             list: 1
         },
         { 
             id: 3,
             title: 'Proceso 3',
-            body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit ipsum dolor.',
+            body: 'Teams',
             list: 1
         },
     ]);
@@ -41,8 +40,7 @@ function Example() {
         const itemID = evt.dataTransfer.getData('itemID');
         const item = tasks.find(item => item.id == itemID);
         if (list === 2 && getList(2).length > 0) {
-            // Si la lista 2 ya tiene un elemento, no se permite soltar más
-            return;
+            return alert("No pude haber mas de un proceso en ejecucion");
         }
         item.list = list
 
@@ -65,6 +63,7 @@ function Example() {
                 <img className='icon-example' src="src/assets/IconoExample.png" alt="" />
             </h1>
             <br/>
+            <h2>Procesador de un solo hilo</h2>
             <div className="drag-and-drop">
                 <div className="column column--1">
                     <h3>
@@ -108,6 +107,23 @@ function Example() {
                     </div>
                 </div>
             </div>
+            <hr/>
+            <div className="explication py-5">
+                <p>
+                En un procesador de un solo hilo, un manejador de procesos es como el director de una orquesta.
+                Imagina que el procesador es la orquesta y cada tarea que realiza la computadora es como una pieza musical.
+                El manejador de procesos se encarga de coordinar y dirigir todas esas piezas para que la orquesta <span>(el procesador) </span>
+                pueda tocar la sinfonía completa de manera armoniosa.<br/>
+                </p>
+                <p>
+                Cuando abres varias aplicaciones o programas en tu computadora, cada uno se convierte en un proceso independiente. Estos procesos compiten por el tiempo de ejecución en el único hilo de procesamiento disponible. Aquí es donde entra en juego el manejador de procesos.
+                El manejador de procesos decide qué proceso se ejecuta en cada momento, asignando porciones de tiempo de CPU a cada uno. Esto se conoce como "planificación de procesos". Puede dar más tiempo de CPU a un proceso que esté realizando tareas intensivas, y menos tiempo a procesos en espera.<br/>
+                </p>
+                <p> 
+                Además, el manejador de procesos se encarga de la creación, terminación y suspensión de procesos. Imagina que es como el encargado de backstage que asegura que cada actor <span>(proceso)</span> esté listo para salir al escenario <span>(ser ejecutado por el procesador)</span>.
+                En resumen, el manejador de procesos en un procesador de un solo hilo es como el maestro de ceremonias que mantiene todo en orden, asigna recursos y asegura que la computadora funcione de manera eficiente, incluso cuando tiene que manejar varias tareas al mismo tiempo.
+                </p>
+            </div>
         </div>
         </ExampleCss>
     )
@@ -122,6 +138,7 @@ const ExampleCss = styled.div`
     place-items: center;
 }
 h1{
+    margin-top: 15px;
     color: #3b3b53;
     text-align: center;
 }
@@ -134,6 +151,7 @@ h1{
     flex-direction: column;
     background-color: #F6F8FC;
     width: 400px;
+    height: 450px;
     min-height: 100px;
     padding: 24px 12px;
     border-radius: 8px;
@@ -169,12 +187,20 @@ h1{
 .drag-and-drop{
     display: flex;
     grid-gap: 40px;
+    padding-bottom: 100px;
 }
 
 @media (max-width: 768px) {
+    h1{
+        margin-top: 32px;
+    }
     .drag-and-drop {
         flex-direction: column;
         grid-gap: 20px;
+    }
+
+    .column{
+        height: 400px;
     }
 }
 
@@ -198,4 +224,19 @@ h1{
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 0;
+}
+.explication{
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    text-aling: center;
+    background-color: #aab1b7;
+}
+
+span{
+    color: #9b2c2c;
 }`;

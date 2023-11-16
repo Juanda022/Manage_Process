@@ -45,7 +45,11 @@ const NavContainer = styled.nav`
       font-weight: bold;
     }
   }
+  right: 0;
+  left: 0;
   padding: .4rem;
+  padding-left: 35px;
+  padding-right: 35px;
   background-color: #333;
   display: flex;
   align-items: center;
@@ -72,6 +76,8 @@ const NavContainer = styled.nav`
     @media(min-width: 768px){
       position: initial;
       margin: 0;
+      padding-left: auto;
+      padding-right: auto;
       a{
         font-size: 1rem;
         color: white;
@@ -99,6 +105,7 @@ const NavContainer = styled.nav`
   .menu{
     @media(min-width: 768px){
       display: none;
+      margin: auto;
     }
   }
 `

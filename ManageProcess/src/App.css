@@ -36,3 +36,7 @@ h1, h1, h3, h4, p{
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+p{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
