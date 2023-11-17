@@ -29,7 +29,6 @@ function Example() {
 
     const startDrag = (evt,item) =>{
         evt.dataTransfer.setData('itemID',item.id)
-        console.log(item);
     }
 
     const dragginOver= (evt) => {
@@ -41,6 +40,12 @@ function Example() {
         const item = tasks.find(item => item.id == itemID);
         if (list === 2 && getList(2).length > 0) {
             return alert("No pude haber mas de un proceso en ejecucion");
+        }
+        if(item.list === 2 && list === 3) {
+            return alert("No se puede pasar un proceso de bloqueo a ejecucion");
+        }
+        if (item.list === 3 && list === 2) {
+            return alert("No se puede pasar un proceso de ejecucion a bloqueo");
         }
         item.list = list
 
