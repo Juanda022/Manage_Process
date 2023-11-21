@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    padding: 50px;
+    text-align: left;
+}
+
+/* Agrega estilos adicionales según sea necesario */
+#Informacion {
+    display: flex;
+    align-items: center;
+}
+
+#Informacion img {
+    width: 100%; /* La imagen ocupará el 100% del ancho disponible */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    margin-right: 20px; /* Agrega un margen a la derecha de la imagen */
+    margin-left: 20px;
+}
+
+
+
