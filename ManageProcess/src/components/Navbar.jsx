@@ -14,9 +14,9 @@ function Navbar() {
             <NavContainer>
                 <h2>Manage <span>Procees</span></h2>
                 <div className={`links ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="#h">1</a>
-                    <a onClick={handleClick} href="#h">2</a>
-                    <a onClick={handleClick} href="#h">3</a>
+                    <a onClick={handleClick} href="/">Juego</a>
+                    <a onClick={handleClick} href="/point1">Diferencias procesos y programa</a>
+                    <a onClick={handleClick} href="/point2">Creacion y terminacion de procesos</a>
                     <a onClick={handleClick} href="#h">4</a>
                     <a onClick={handleClick} href="#h">5</a>
                 </div>
