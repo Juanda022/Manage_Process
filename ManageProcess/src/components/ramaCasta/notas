@@ -1,0 +1,18 @@
+<button id="ejecucion" onclick = ejecucion() type="button" class="btn btn-outline-success">En ejecucion</button>
+    <button id="listo" type="button" class="btn btn-outline-danger">Listo</button>
+    <button id="bloqueado" type="button" class="btn btn-outline-warning">Bloqueado</button>
+
+    <script>
+        var ejecucion = document.getElementById("ejecucion");
+        function ejecucion(){
+            
+        }
+
+        function listo(){
+
+        }
+
+        function bloqueado(){
+
+        }
+    </script>
