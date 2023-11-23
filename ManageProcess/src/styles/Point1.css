@@ -1,9 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 nav {
     background-color: #333;
     color: white;
@@ -25,6 +19,9 @@ nav li {
 section {
     padding: 50px;
     text-align: left;
+}
+.modal-backdrop {
+  display: none;
 }
 
 /* Agrega estilos adicionales según sea necesario */

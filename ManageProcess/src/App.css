@@ -40,3 +40,9 @@ h1, h1, h3, h4, p{
 p{
   font-family: 'Kdam Thmor Pro', sans-serif;
 }
+
+.dropdown:hover > .dropdown-menu{
+  display: block;
+  margin-left: 100px;
+  margin-top: 0px;
+}

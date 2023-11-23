@@ -17,8 +17,9 @@ function Navbar() {
                     <a onClick={handleClick} href="/">Juego</a>
                     <a onClick={handleClick} href="/point1">Diferencias procesos y programa</a>
                     <a onClick={handleClick} href="/point2">Creacion y terminacion de procesos</a>
-                    <a onClick={handleClick} href="#h">4</a>
-                    <a onClick={handleClick} href="#h">5</a>
+                    <a onClick={handleClick} href="/status">Estados</a>
+                    <a onClick={handleClick} href="/hierarchy">Jerarquia</a>
+                    <a onClick={handleClick} href="/multiProgramming">MultiProgramacion</a>
                 </div>
                 <div className='menu'>
                     <MenuButton clicked={clicked} handleClick={handleClick}/>
