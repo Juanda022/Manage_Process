@@ -4,7 +4,7 @@ import Example from './components/Example';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import "./App.css"
 import ProgramAndProcesses from './pages/Program&Processes';
-import Point2 from './pages/Point2';
+import Creation_TerminationProcesses from './pages/Creation_TerminationProcesses';
 import Status from './pages/Status';
 import Hierarchy from './pages/Hierarchy';
 import Multiprogramming from './pages/Multiprogramming';
@@ -16,8 +16,8 @@ function App() {
       <Routes>
           <Route path='/' element={<Navbar/>}>
             <Route index element = {<Example/>}/>
-            <Route path='/point1' element={<ProgramAndProcesses/>}/>
-            <Route path='/point2' element={<Point2/>}/>
+            <Route path='/Program_Processes' element={<ProgramAndProcesses/>}/>
+            <Route path='/CreationProcesses' element={<Creation_TerminationProcesses/>}/>
             <Route path='/status' element={<Status/>}/>
             <Route path='/hierarchy' element={<Hierarchy/>}/>
             <Route path='/multiProgramming' element={<Multiprogramming/>}/>

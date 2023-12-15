@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Point1.css"
+import "../styles/Program_Processes.css"
 
 function ProgramAndProcesses() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Point2.css"
+import "../styles/Creation_TerminationProcesses.css"
 
 function Point2() {
     return (
